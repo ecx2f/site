@@ -111,6 +111,15 @@ export default function Home({ latestPost }: HomeProps) {
                   <span className={styles.linkPrefix}>./</span>
                   <span className={styles.linkText}>x.com</span>
                 </a>
+                <a 
+                  href="https://euxorasoft.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.link}
+                >
+                  <span className={styles.linkPrefix}>./</span>
+                  <span className={styles.linkText}>euxorasoft (founder)</span>
+                </a>
               </div>
             </div>
           </section>

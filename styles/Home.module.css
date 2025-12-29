@@ -1,21 +1,25 @@
 .container {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .main {
-  text-align: center;
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  text-align: left;
 }
 
 .prompt {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #6b9bd1;
-  margin-bottom: 2rem;
-  font-family: 'Courier New', monospace;
+  margin-bottom: 1.5rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 .dollar {
@@ -26,31 +30,196 @@
 .name {
   font-size: 4rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #e0e0e0;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 .tagline {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #a0a0a0;
-  margin-bottom: 3rem;
-  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.bio {
+  margin-top: 1rem;
+}
+
+.bioText {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.bioLink {
+  color: #6b9bd1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bioLink:hover {
+  color: #8bb3e8;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  border-top: 1px solid rgba(107, 157, 209, 0.15);
+  padding-top: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.sectionPrompt {
+  color: #4a7ba7;
+  font-size: 0.95rem;
+}
+
+.sectionTitle {
+  color: #6b9bd1;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.sectionContent {
+  margin-left: 1.5rem;
+}
+
+.techRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.techLabel {
+  color: #6b9bd1;
+  min-width: 120px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.techValue {
+  color: #a0a0a0;
+  flex: 1;
 }
 
 .links {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  font-size: 1.1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.links a {
+.link {
+  display: flex;
+  align-items: center;
   color: #6b9bd1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.link:hover {
+  color: #8bb3e8;
+}
+
+.linkPrefix {
+  color: #4a7ba7;
+  margin-right: 0.25rem;
+}
+
+.linkText {
+  color: inherit;
+}
+
+.latestPost {
+  display: block;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.links a:hover {
+.latestPostHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.latestPostTitle {
+  font-size: 0.95rem;
+  color: #6b9bd1;
+  font-weight: 400;
+}
+
+.latestPost:hover .latestPostTitle {
   color: #8bb3e8;
+}
+
+.latestPostMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+.latestPostDate {
+  color: #a0a0a0;
+}
+
+.latestPostTime {
+  color: #a0a0a0;
+}
+
+.separator {
+  color: #4a7ba7;
+  opacity: 0.5;
+}
+
+.systemTerminal {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: rgba(20, 20, 30, 0.2);
+  border: 1px solid rgba(107, 157, 209, 0.1);
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+  }
+  
+  .bioText {
+    font-size: 0.85rem;
+  }
+  
+  .techRow {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .techLabel {
+    min-width: auto;
+  }
 }
 

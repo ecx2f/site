@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ecx2f.dev/sitemap.xml
+

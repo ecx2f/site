@@ -54,7 +54,7 @@ export default function Home({ latestPost }: HomeProps) {
       <main className={styles.main}>
         <div className={styles.header}>
           <div className={styles.prompt}>
-            <span className={styles.dollar}>$</span> cat about.txt
+            <span className={styles.dollar}>$</span> cat whoami.txt
           </div>
           <h1 className={styles.name}>ecx</h1>
           <p className={styles.tagline}>systems engineering student • backend developer • low-level enthusiast</p>

@@ -1,0 +1,37 @@
+.terminal {
+  display: flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  color: #6b9bd1;
+  line-height: 1.6;
+}
+
+.prompt {
+  color: #4a7ba7;
+  margin-right: 0.5rem;
+}
+
+.command {
+  color: #a0a0a0;
+  letter-spacing: 0.02em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  background-color: #6b9bd1;
+  margin-left: 0.2em;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+

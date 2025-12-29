@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import styles from '@/styles/Blog.module.css'
@@ -21,8 +22,30 @@ interface BlogIndexProps {
 }
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
+  const siteUrl = 'https://ecx2f.dev'
+  const title = 'blog • ecx2f.dev'
+  const description = 'blog posts about low-level programming, backend development, automation, cybersecurity, reverse engineering, and ai integration.'
+
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={`${siteUrl}/blog`} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteUrl}/blog`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={`${siteUrl}/blog`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Head>
+      <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.prompt}>
           <span className={styles.dollar}>$</span> cat blog.txt
@@ -44,6 +67,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
         </ul>
       </main>
     </div>
+    </>
   )
 }
 

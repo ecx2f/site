@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import SystemTerminal from '@/components/SystemTerminal'
@@ -24,8 +25,32 @@ interface HomeProps {
 }
 
 export default function Home({ latestPost }: HomeProps) {
+  const siteUrl = 'https://ecx2f.dev'
+  const title = 'ecx2f.dev'
+  const description = 'systems engineering student • backend developer • low-level enthusiast. writing about low-level programming, backend development, automation, cybersecurity, reverse engineering, and ai integration.'
+
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={siteUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="ecx2f.dev" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={siteUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Head>
+      <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.header}>
           <div className={styles.prompt}>
@@ -130,6 +155,7 @@ export default function Home({ latestPost }: HomeProps) {
         </div>
       </main>
     </div>
+    </>
   )
 }
 
